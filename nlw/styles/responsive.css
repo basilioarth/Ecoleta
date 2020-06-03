@@ -1,0 +1,40 @@
+/*No CSS o @media é um conjunto de regras para algumas coisas que podemos configurar aqui*/
+@media (max-width: 900px){
+    /* Quando a minha tela for menor que 900px ela vai começar a receber algumas regras. A seguir teremos conjuntos de CSS*/
+        #page-home {
+            background-position-x: 70vw;
+        }
+    
+        #page-home .content {
+            align-items: center;
+            text-align: center;
+        }
+    
+        #page-home header a {
+            position: absolute;
+            bottom: 48px;
+            /*Joga o elemento a pra 48 pixels de diferença do fundo da página*/
+    
+            left: 50%;
+            transform: translateX(-50%);
+            /*Faz com que ele avhe o ponto médio do elemento e o centro dele fica a 50% de distância do lado esquerdo da tela*/
+        }
+    
+        #page-home main {
+            align-items: center;
+        }
+    }
+
+/* Com uma largura de 1700px pra cima, aplicaremos as seguintes regras */
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 40vw;
+    }
+}
+
+/* De 0px a 760px de altura, aplicaremos as seguintes regras */
+@media (max-heigth: 760px) {
+    #page-home {
+        background-position-y: 200px;
+    }
+}
