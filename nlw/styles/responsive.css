@@ -23,6 +23,14 @@
         #page-home main {
             align-items: center;
         }
+
+        #page-search-results .cards {
+            grid-template-columns: 1fr;
+        }
+
+        #page-search-results .cards img {
+            height: 250px;
+        }
     }
 
 /* Com uma largura de 1700px pra cima, aplicaremos as seguintes regras */

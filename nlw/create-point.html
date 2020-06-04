@@ -25,7 +25,8 @@
                 <!-- o parâmetro alt serve como segunda alternativa caso a imagem desejada não seja encontrada. Tem como um dos motivos a acessibilidade, onde
                 , caso algum leitor de tela esteja processando as informações da página para um usuário com deficiência visual, o leitor irá reproduzir 
                 sonoramente o que está escrito no parâmetro alt.-->
-                <a href="#">
+                <a href="index.html">
+                    <!-- Poderiamos colocar "/". Como estamos rodando pelo servidor o / significa que é a home -->
                     <span></span>
                     Voltar para home
                 </a>
@@ -42,24 +43,25 @@
                 <div class="field">
                     <label for="name">Nome de entidade</label>
                     <!-- estamos associando a entrada a esse label através do parâmetro for -->
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
+                    <!-- o atributo required indica que, para enviarmos o formulário, é preciso que esse input esteja preenchido -->
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address">
+                        <input type="text" name="address" required>
                     </div>
                     <div class="field">
                         <label for="address2">Número/Complemento</label>
-                        <input type="text" name="address2">
+                        <input type="text" name="address2" required>
                     </div>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="state">Estado</label>
-                        <select name="uf">
+                        <select name="uf" required>
                             <option value="">Selecione o Estado</option>
                         </select>
 
@@ -68,7 +70,7 @@
 
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <select name="city" disabled>
+                        <select name="city" disabled required>
                             <option value="">Selecione a Cidade</option>
                         </select>
                     </div>
@@ -76,6 +78,49 @@
 
             </fieldset>
             <!-- Serve para melhor organizar/estruturas os campos de dado do formulário -->
+
+            <fieldset>
+            <!-- Vai servir para estruturarmos a parte de baixo da nossa página (a parte com os ícones de cada tipo de resíduo)-->
+                <legend>
+                    <h2>Ítens de coleta</h2>
+                </legend>
+
+                <div class="items-grid">
+                    <li data-id="1">
+                    <!-- tag geralmente utilizada quando vamos fazer uma listagem de alguma coisa-->
+                        <img src="/assets/extras-aula-1/icones/lampadas.svg" alt="Lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+
+                    <li data-id="2">
+                            <img src="/assets/extras-aula-1/icones/baterias.svg" alt="Pilhas e Baterias">
+                            <span>Pilhas e Baterias</span>
+                    </li>
+
+                    <li data-id="3">
+                        <img src="/assets/extras-aula-1/icones/papeis-papelao.svg" alt="Papéis e Papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+
+                    <li data-id="4">
+                        <img src="/assets/extras-aula-1/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+
+                    <li data-id="5">
+                        <img src="/assets/extras-aula-1/icones/organicos.svg" alt="Resíduos Orgânicos">
+                        <span>Resíduos Orgâncios</span>
+                    </li>
+
+                    <li data-id="6">
+                        <img src="/assets/extras-aula-1/icones/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+
+                <input type="hidden" name="items">
+                
+            </fieldset>
 
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>

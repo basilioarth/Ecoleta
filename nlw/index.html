@@ -21,9 +21,10 @@
 
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+
     <link rel="stylesheet" href="/styles/responsive.css">
     <!-- a importação do código referente à responsividade da página html fica por último. -->
-
 </head>
 
 <body>
@@ -37,7 +38,7 @@
                 <!-- o parâmetro alt serve como segunda alternativa caso a imagem desejada não seja encontrada. Tem como um dos motivos a acessibilidade, onde
                 , caso algum leitor de tela esteja processando as informações da página para um usuário com deficiência visual, o leitor irá reproduzir 
                 sonoramente o que está escrito no parâmetro alt.-->
-                <a href="#">
+                <a href="/create-point.html">
                     <span></span>
                     Cadastre um ponto de coleta
                 </a>
@@ -56,5 +57,30 @@
 
     </div>
 
+    <!-- Código no estilo modal. Nesse estilo uma página é apresentada sobre uma página já existente. -->
+
+    <div id="modal" class="hide">
+        <!-- classe hide será aquela que especificaremos atraves do css para que esconda a nossa página.
+        quando clicarmos no botão, desabilitaremos esse hide para mostrar essa tela. -->
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de Coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="/search-results.html">
+                <!-- O atributo action mostra pra que página eu vou depois que a ação executar -->
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name = "search" placeholder="Pesquise por cidade">
+                    <!-- placeholder: atributo que põe o seu conteúdeo dentro da box do input -->
+                    <button>
+                        <img src="/assets/extras-aula-1/icones/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
