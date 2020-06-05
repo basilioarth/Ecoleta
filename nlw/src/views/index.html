@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    <div class="content">
+        <header>
+            <img src="/assets/extras-aula-1/icones/logo.svg" alt="logomarca">
+            <!-- o parâmetro alt serve como segunda alternativa caso a imagem desejada não seja encontrada. Tem como um dos motivos a acessibilidade, onde
+            , caso algum leitor de tela esteja processando as informações da página para um usuário com deficiência visual, o leitor irá reproduzir 
+            sonoramente o que está escrito no parâmetro alt.-->
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
+        
+        <main>
+            <h1>Seu marketplace de coleta de resíduos</h1>
+
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de maneira eficiente.</p>
+            
+            <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+        </main>
+    </div>
+{% endblock content %}
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}
+    

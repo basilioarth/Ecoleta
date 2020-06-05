@@ -1,0 +1,23 @@
+<!-- Código no estilo modal. Nesse estilo uma página é apresentada sobre uma página já existente. -->
+
+<div id="modal" class="hide">
+    <!-- classe hide será aquela que especificaremos atraves do css para que esconda a nossa página.
+    quando clicarmos no botão, desabilitaremos esse hide para mostrar essa tela. -->
+    <div class="content">
+        <div class="header">
+            <h1>Pontos de Coleta</h1>
+            <a href="#">Fechar</a>
+        </div>
+        <form action="/search">
+            <!-- O atributo action mostra pra que página eu vou depois que a ação executar -->
+            <label for="search">Cidade</label>
+            <div class="search field">
+                <input type="text" name = "search" placeholder="Pesquise por cidade">
+                <!-- placeholder: atributo que põe o seu conteúdeo dentro da box do input -->
+                <button>
+                    <img src="/assets/extras-aula-1/icones/search.svg" alt="Buscar">
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
