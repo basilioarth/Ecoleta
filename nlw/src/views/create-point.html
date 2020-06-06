@@ -8,13 +8,16 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 {% block content %}
     {% include "partials/page-header.html" %}
     <!-- estamos colocando nesse trecho de código o que está no código page-header.html da pasta partials -->
 
-    <form action="">
+    <form action="/savepoint" method="POST">
+    <!-- o atributo action diz para onde o formulário irá levar os dados através do método POST -->
+    <!-- o método default é o GET que é utilizado quando colocamos um dado na url do navegador -->
         <h1>Cadastro do ponto de coleta</h1>
 
         <fieldset>
@@ -23,12 +26,13 @@
             </legend>
 
             <div class="field-group">
-            <div class="field">
+                <div class="field">
                     <label for="name">Nome da entidade</label>
                     <!-- estamos associando a entrada a esse label através do parâmetro for -->
                     <input type="text" name="name" required="required">
                     <!-- o atributo required indica que, para enviarmos o formulário, é preciso que esse input esteja preenchido -->
-                </div>            <div class="field">
+                </div>            
+                <div class="field">
                     <label for="name">Imagem da entidade</label>
                     <input
                         type="url" 
@@ -78,33 +82,33 @@
             </legend>
 
             <div class="items-grid">
-                <li data-id="1">
+                <li data-id="Lâmpadas">
                     <!-- tag geralmente utilizada quando vamos fazer uma listagem de alguma coisa-->
                     <img src="/assets/extras-aula-1/icones/lampadas.svg" alt="Lâmpadas">
                     <span>Lâmpadas</span>
                 </li>
 
-                <li data-id="2">
+                <li data-id="Pilhas e Baterias">
                     <img src="/assets/extras-aula-1/icones/baterias.svg" alt="Pilhas e Baterias">
                     <span>Pilhas e Baterias</span>
                 </li>
 
-                <li data-id="3">
+                <li data-id="Papéis e Papelão">
                     <img src="/assets/extras-aula-1/icones/papeis-papelao.svg" alt="Papéis e Papelão">
                     <span>Papéis e Papelão</span>
                 </li>
 
-                <li data-id="4">
+                <li data-id="Resíduos Eletrônicos">
                     <img src="/assets/extras-aula-1/icones/eletronicos.svg" alt="Resíduos Eletrônicos">
                     <span>Resíduos Eletrônicos</span>
                 </li>
 
-                <li data-id="5">
+                <li data-id="Resíduos Orgânicos">
                     <img src="/assets/extras-aula-1/icones/organicos.svg" alt="Resíduos Orgânicos">
-                    <span>Resíduos Orgâncios</span>
+                    <span>Resíduos Orgânicos</span>
                 </li>
 
-                <li data-id="6">
+                <li data-id="Óleo de Cozinha">
                     <img src="/assets/extras-aula-1/icones/oleo.svg" alt="Óleo de Cozinha">
                     <span>Óleo de Cozinha</span>
                 </li>
@@ -116,7 +120,14 @@
 
         <button type="submit">Cadastrar ponto de coleta</button>
     </form>
+
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {%include "partials/point-created.html"%}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>

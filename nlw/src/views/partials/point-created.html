@@ -1,0 +1,19 @@
+<!-- Código no estilo modal. Nesse estilo uma página é apresentada sobre uma página já existente. -->
+
+<div id="modal" class="point">
+    <!-- classe hide será aquela que especificaremos atraves do css para que esconda a nossa página.
+    quando clicarmos no botão, desabilitaremos esse hide para mostrar essa tela. -->
+    <div class="content">
+        <img src="/assets/extras-aula-1/icones/check.svg" alt="Cadastro concluído">
+        <h1>Cadastro concluído!</h1>
+    </div>
+</div>
+
+<script>
+
+setTimeout(() => {
+    window.location = "/"
+}, 2000)
+/* Estamos redirecioando a página para a página inicial após 2 segundos */
+</script>
+<!-- Estamos utilizando o JavaScript aqui nessa página -->

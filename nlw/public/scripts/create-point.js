@@ -92,6 +92,8 @@ function handleSelectedItem(event){
 
     const itemId = itemLi.dataset.id
 
+    // console.log('ITEM ID: ', itemId)
+
     // Verifica se há itens selecionados, se sim, coleta esse itens selecionados 
     const alreadySelected = selectedItems.findIndex( item => {
         return  item == itemId
@@ -116,7 +118,7 @@ function handleSelectedItem(event){
         selectedItems.push(itemId) 
     }
 
-    //console.log(selectedItems)
+    //console.log('selectedItems: ', selectedItems)
 
 // Para podermos enviar essa informação através da subimissão do meu relatório, eu preciso passar isso para o mesmo. Para isso, alteraremos o campo escondido
 // com os itens selecionados

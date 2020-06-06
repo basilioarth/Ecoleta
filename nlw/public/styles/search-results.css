@@ -1,3 +1,23 @@
+body {
+    background-color: white;
+}
+
+/* Usando o body acima, teremos as seguintes configurações: */
+body::after {
+    content: "";
+    position: absolute;
+    background: #f0f0f5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 16rem;
+    z-index: -1;
+}
+
+/*
+Sem o body ali em cima, faríamos:
+
 body::after {
     content: "";
     position: fixed;
@@ -8,6 +28,7 @@ body::after {
     bottom: 0;
     z-index: -1;
 }
+*/
 
 /* Estamos procurando algum elemento que tenha o id = page-create-point para eu adicionar propriedades*/
 #page-search-results {
