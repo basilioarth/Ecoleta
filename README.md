@@ -4,18 +4,18 @@ O repositório tem como objetivo registrar o conhecimento obtido durante toda a 
 
 # :page_with_curl: Pages
 
-Home
+## Home
 ![Screenshot](pages/page-home.PNG)
 
-Create Point
+## Create Point
 ![Screenshot](pages/page-create-point.PNG)
 ![Screenshot](pages/page-create-point-items.PNG)
 
-Registration completed successfully
+## Registration completed successfully
 ![Screenshot](pages/page-conclued-cadrast.PNG)
 
-Collection Points
+## Collection Points
 ![Screenshot](pages/page-collection-points.PNG)
 
-Search Results
+## Search Results
 ![Screenshot](pages/page-search-results.PNG)
