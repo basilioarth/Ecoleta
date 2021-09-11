@@ -1,4 +1,4 @@
-# :rocket: Ecoleta - Next Level Week #1 :beginner:
+# :recycle: Ecoleta
 
 Implementação do projeto web desenvolvido na Next Level Week #1 da Rocketseat: aplicação web para cadastro e pesquisa de pontos de coleta de lixo para reciclagem em sua cidade.
 
