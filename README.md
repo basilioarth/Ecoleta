@@ -1,6 +1,6 @@
 # :rocket: Ecoleta - Next Level Week #1 :beginner:
 
-Aplicação para cadastro e pesquisa de pontos de coleta de lixo para reciclagem em sua ciade.
+Implementação do projeto web desenvolvido na Next Level Week #1 da Rocketseat: aplicação para cadastro e pesquisa de pontos de coleta de lixo para reciclagem em sua cidade.
 
 # :page_with_curl: Pages
 
